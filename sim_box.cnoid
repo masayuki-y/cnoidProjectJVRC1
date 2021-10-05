@@ -29,30 +29,30 @@ items:
           plugin: Body
           class: BodyItem
           data:
-            modelFile: "/usr/share/OpenHRP-3.1/robot/JVRC1/main.wrl"
+            modelFile: "${PROGRAM_TOP}/share/OpenHRP-3.1/robot/JVRC1/main.wrl"
             currentBaseLink: "PELVIS"
-            rootPosition: [ -0.0164712421, -0.00366884734, 0.823007651 ]
+            rootPosition: [ -0.0956279004, -0.00437257458, 0.473597208 ]
             rootAttitude: [
-              0.999520541, 0.000990316288, -0.030946845,
-              -0.00104419639, 0.999997967, -0.00172494057,
-              0.0309450738, 0.00175642811, 0.999519543 ]
+              0.996251865, 0.0261789994, -0.0824432032,
+              -0.0264703357, 0.999646615, -0.00244256786,
+              0.0823501251, 0.00461571205, 0.996592771 ]
             jointPositions: [
-              -0.379810, -0.008074, -0.000838,  0.742713,  0.002117, -0.331916, -0.377849,  0.022870, -0.000819,  0.736924,
-              -0.021918, -0.328003,  0.000273,  0.132712,  0.002899, -0.000007,  0.000172,  0.000190, -0.046211, -0.158306,
-               0.002202, -0.510719,  0.000086,  0.001314,  0.000224,  0.002210,  0.003101, -0.002201, -0.002804, -0.002201,
-              -0.002804, -0.046428,  0.159369, -0.001891, -0.511009, -0.000085, -0.001148, -0.000219, -0.002217, -0.003024,
-               0.002064,  0.002707,  0.002064,  0.002707 ]
-            initialRootPosition: [ -0.0164712421, -0.00366884734, 0.823007651 ]
+              -1.290082,  0.029655,  0.024685,  2.206758,  0.020024, -0.833980, -1.277362, -0.015722, -0.068261,  2.208450,
+              -0.093487, -0.846526,  0.022325,  0.197923,  0.001542,  0.000250, -0.002827, -0.103042, -1.932719,  0.125209,
+              -0.466771, -0.024252, -0.584388, -0.310316,  1.037496, -0.048230,  0.007385, -0.007448, -0.007406, -0.007448,
+              -0.007406, -1.933152, -0.125171,  0.462832, -0.024088,  0.580316,  0.312860, -1.032155,  0.051421, -0.007535,
+               0.007533,  0.007534,  0.007533,  0.007534 ]
+            initialRootPosition: [ -0.0956279004, -0.00437257458, 0.473597208 ]
             initialRootAttitude: [
-              0.999520541, 0.000990316288, -0.030946845,
-              -0.00104419639, 0.999997967, -0.00172494057,
-              0.0309450738, 0.00175642811, 0.999519543 ]
+              0.996251865, 0.0261789994, -0.0824432032,
+              -0.0264703357, 0.999646615, -0.00244256786,
+              0.0823501251, 0.00461571205, 0.996592771 ]
             initialJointPositions: [
-              -0.379810, -0.008074, -0.000838,  0.742713,  0.002117, -0.331916, -0.377849,  0.022870, -0.000819,  0.736924,
-              -0.021918, -0.328003,  0.000273,  0.132712,  0.002899, -0.000007,  0.000172,  0.000190, -0.046211, -0.158306,
-               0.002202, -0.510719,  0.000086,  0.001314,  0.000224,  0.002210,  0.003101, -0.002201, -0.002804, -0.002201,
-              -0.002804, -0.046428,  0.159369, -0.001891, -0.511009, -0.000085, -0.001148, -0.000219, -0.002217, -0.003024,
-               0.002064,  0.002707,  0.002064,  0.002707 ]
+              -1.290082,  0.029655,  0.024685,  2.206758,  0.020024, -0.833980, -1.277362, -0.015722, -0.068261,  2.208450,
+              -0.093487, -0.846526,  0.022325,  0.197923,  0.001542,  0.000250, -0.002827, -0.103042, -1.932719,  0.125209,
+              -0.466771, -0.024252, -0.584388, -0.310316,  1.037496, -0.048230,  0.007385, -0.007448, -0.007406, -0.007448,
+              -0.007406, -1.933152, -0.125171,  0.462832, -0.024088,  0.580316,  0.312860, -1.032155,  0.051421, -0.007535,
+               0.007533,  0.007534,  0.007533,  0.007534 ]
             zmp: [ 0, 0, 0 ]
             collisionDetection: true
             selfCollisionDetection: false
@@ -84,13 +84,36 @@ items:
                     class: ForceSensorVisualizer
                     name: ForceSensor
                     visualRatio: 0.002
+                  -
+                    class: PointCloudVisualizer
+                    name: dcamera
+                    renderingMode: Point
+                    pointSize: 0
+                    voxelSize: 0.01
+                    isEditable: false
+                  -
+                    class: RangeSensorVisualizer
+                    name: ranger
+                    renderingMode: Point
+                    pointSize: 0
+                    voxelSize: 0.01
+                    isEditable: false
+                  -
+                    class: CameraImageVisualizer
+                    name: rcamera
+                  -
+                    class: CameraImageVisualizer
+                    name: lcamera
+                  -
+                    class: CameraImageVisualizer
+                    name: dcamera_Image
         -
           id: 6
           name: "longfloor"
           plugin: Body
           class: BodyItem
           data:
-            modelFile: "/usr/share/OpenHRP-3.1/sample/model/longfloor.wrl"
+            modelFile: "${PROGRAM_TOP}/share/OpenHRP-3.1/sample/model/longfloor.wrl"
             currentBaseLink: "WAIST"
             rootPosition: [ 0, 0, -0.1 ]
             rootAttitude: [
@@ -109,27 +132,6 @@ items:
             isEditable: true
         -
           id: 7
-          name: "Wall"
-          plugin: Body
-          class: BodyItem
-          data:
-            modelFile: "/usr/share/hrpsys/samples/environments/sim_mc_wall.wrl"
-            currentBaseLink: ""
-            rootPosition: [ 0.55, 0.0, 0.0 ]
-            rootAttitude: [
-              1, 0, 0,
-              0, 1, 0,
-              0, 0, 1 ]
-            initialRootPosition: [ 0.55, 0.0, 0.0 ]
-            initialRootAttitude: [
-              1, 0, 0,
-              0, 1, 0,
-              0, 0, 1 ]
-            collisionDetection: true
-            selfCollisionDetection: false
-            isEditable: true
-        -
-          id: 8
           name: "AISTSimulator"
           plugin: Body
           class: AISTSimulatorItem
@@ -158,7 +160,7 @@ items:
             2Dmode: false
             oldAccelSensorMode: false
         -
-          id: 9
+          id: 8
           name: "sim_mc.py"
           plugin: PythonSimScript
           class: PythonSimScriptItem
@@ -168,19 +170,67 @@ items:
             simulationOnly: true
             backgroundExecution: true
             file: "${PROJECT_DIR}/sim_mc.py"
+        -
+          id: 9
+          name: "TempBase"
+          plugin: Body
+          class: BodyItem
+          data:
+            modelFile: "${SHARE}/model/misc/box6.body"
+            currentBaseLink: "WAIST"
+            rootPosition: [ 0.785461593, 0.0113127856, 0.614826638 ]
+            rootAttitude: [
+              0.999441099, -0.0334288489, 4.56298926e-05,
+              0.0334288792, 0.999439838, -0.00158736741,
+              7.45953297e-06, 0.00158800559, 0.999998739 ]
+            jointPositions: [  ]
+            initialRootPosition: [ 0.785461593, 0.0113127856, 0.614826638 ]
+            initialRootAttitude: [
+              0.999441099, -0.0334288489, 4.56298926e-05,
+              0.0334288792, 0.999439838, -0.00158736741,
+              7.45953292e-06, 0.00158800559, 0.999998739 ]
+            zmp: [ 0, 0, 0 ]
+            collisionDetection: true
+            selfCollisionDetection: false
+            isEditable: true
+        -
+          id: 10
+          name: "BOX"
+          plugin: Body
+          class: BodyItem
+          data:
+            modelFile: "${SHARE}/model/misc/box6.body"
+            currentBaseLink: "WAIST"
+            rootPosition: [ 0.737958402, -0.00437257458, 1.28469565 ]
+            rootAttitude: [
+              1, 0, 0,
+              0, 1, 0,
+              0, 0, 1 ]
+            jointPositions: [  ]
+            initialRootPosition: [ 0.737958402, -0.00437257458, 1.27238632 ]
+            initialRootAttitude: [
+              1, 0, 0,
+              0, 1, 0,
+              0, 0, 1 ]
+            zmp: [ 0, 0, 0 ]
+            collisionDetection: true
+            selfCollisionDetection: false
+            isEditable: true
 views:
   -
     id: 0
     plugin: Base
     class: ItemPropertyView
+    mounted: true
   -
     id: 1
     plugin: Base
     class: ItemTreeView
+    mounted: true
     state:
-      selected: [ [ 5, "ForceSensor" ], 7 ]
-      checked: [ 3, 4, [ 5, "ForceSensor" ], 6, 7, 9 ]
-      expanded: [ 2, 3, 4, 5, 7 ]
+      selected: [ 9 ]
+      checked: [ 3, 4, [ 5, "ForceSensor" ], 6, 8, 10 ]
+      expanded: [ 2, 3, 4, 5, 7, 9 ]
   -
     id: 2
     plugin: Base
@@ -241,7 +291,7 @@ views:
     class: SceneView
     mounted: true
     state:
-      editMode: false
+      editMode: true
       viewpointControlMode: thirdPerson
       collisionLines: false
       polygonMode: fill
@@ -280,9 +330,9 @@ views:
           fieldOfView: 0.6978
           near: 0.01
           far: 10000
-          eye: [ -1.20231813, -2.7105906, 2.29043851 ]
-          direction: [ 0.533316651, 0.745780686, -0.399229905 ]
-          up: [ 0.232225292, 0.32473979, 0.916850851 ]
+          eye: [ 0.526501122, -3.41108498, 1.29118466 ]
+          direction: [ -0.0431763999, 0.981054595, -0.18885889 ]
+          up: [ -0.008303678, 0.188676256, 0.982004236 ]
         -
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -346,6 +396,7 @@ views:
     id: 11
     plugin: Body
     class: JointSliderView
+    mounted: true
     state:
       showAllJoints: true
       jointId: true
@@ -355,7 +406,7 @@ views:
       slider: true
       dial: false
       labelOnLeft: true
-      currentBodyItem: 3
+      currentBodyItem: 9
   -
     id: 12
     name: "Joint State"
@@ -368,7 +419,7 @@ views:
     class: LinkSelectionView
     state:
       listingMode: "Link List"
-      currentBodyItem: 3
+      currentBodyItem: 9
       bodyItems:
         -
           id: 3
@@ -396,11 +447,11 @@ views:
 toolbars:
   "TimeBar":
     minTime: 0
-    maxTime: 42
+    maxTime: 65.615
     frameRate: 1000
     playbackFrameRate: 50
     idleLoopDrivenMode: false
-    currentTime: 11.44
+    currentTime: 65.615
     speedScale: 1
     syncToOngoingUpdates: true
     autoExpansion: true
@@ -413,7 +464,7 @@ toolbars:
     penetrationBlockDepth: 0.0005
     lazyCollisionDetectionMode: true
   "BodyBar":
-    current: 3
+    current: 9
   "LeggedBodyBar":
     stanceWidth: 0.15
   "BodyMotionGenerationBar":
@@ -464,6 +515,16 @@ Body:
         showCenterOfMass: false
         showPpcom: false
         showZmp: false
+      -
+        bodyItem: 9
+        showCenterOfMass: false
+        showPpcom: false
+        showZmp: false
+      -
+        bodyItem: 10
+        showCenterOfMass: false
+        showPpcom: false
+        showZmp: false
     staticModelEditing: false
   "KinematicFaultChecker":
     checkJointPositions: true
@@ -491,21 +552,30 @@ viewAreas:
     contents:
       type: splitter
       orientation: vertical
-      sizes: [ 767, 203 ]
+      sizes: [ 747, 198 ]
       children:
         -
           type: splitter
           orientation: horizontal
-          sizes: [ 1390, 526 ]
+          sizes: [ 1357, 514 ]
           children:
             -
-              type: pane
-              views: [ 5 ]
-              current: 5
+              type: splitter
+              orientation: horizontal
+              sizes: [ 1060, 293 ]
+              children:
+                -
+                  type: pane
+                  views: [ 5 ]
+                  current: 5
+                -
+                  type: pane
+                  views: [ 0, 11 ]
+                  current: 11
             -
               type: pane
-              views: [ 12, 9 ]
-              current: 12
+              views: [ 12, 9, 1 ]
+              current: 1
         -
           type: pane
           views: [ 2, 16 ]
@@ -513,13 +583,7 @@ viewAreas:
 layoutOfToolBars:
   rows:
     -
-      - { name: "FileBar", x: 0, priority: 0 }
-      - { name: "ScriptBar", x: 49, priority: 0 }
-      - { name: "TimeBar", x: 98, priority: 0 }
-      - { name: "SceneBar", x: 1009, priority: 0 }
-      - { name: "GraphBar", x: 1284, priority: 0 }
-      - { name: "SimulationBar", x: 1397, priority: 0 }
-      - { name: "KinematicsBar", x: 1606, priority: 0 }
-    - 
-      - { name: "BodyBar", x: 0, priority: 0 }
-      - { name: "BodyMotionGenerationBar", x: 276, priority: 0 }
+      - { name: "FileBar", x: 0, priority: 2 }
+      - { name: "SimulationBar", x: 0, priority: 1 }
+      - { name: "TimeBar", x: 47, priority: 0 }
+      - { name: "SceneBar", x: 1640, priority: 3 }
