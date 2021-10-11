@@ -36,9 +36,9 @@ MyFirstController::MyFirstController(mc_rbdyn::RobotModulePtr rm, double dt, con
 
 bool MyFirstController::run()
 {
-  efTask1->set_ef_pose(sva::PTransformd{sva::RotY(-M_PI/2), Eigen::Vector3d{0.5, -0.16, 1.6}});
+  efTask1->set_ef_pose(sva::PTransformd{sva::RotY(-M_PI/2), Eigen::Vector3d{0.24, -0.22, 1.25}});
   auto pt2 = efTask2->get_ef_pose();
-  efTask2->set_ef_pose(sva::PTransformd{sva::RotY(-M_PI/2), Eigen::Vector3d{0.5, 0.16, 1.6}});
+  efTask2->set_ef_pose(sva::PTransformd{sva::RotY(-M_PI/2), Eigen::Vector3d{0.24, 0.22, 1.25}});
 
   //control CoM with switch_com_target()
 
@@ -60,8 +60,8 @@ void MyFirstController::reset(const mc_control::ControllerResetData & reset_data
 
   //comZero is obtained by doing as forrow
    comZero = comTask->com();
-   robots().robot(1).posW(sva::PTransformd(sva::RotZ(M_PI), Eigen::Vector3d(0.6, 0.0, 1.4)));
-}\　　　　　　　　　　　　　　　　　　
+  robots().robot(1).posW(sva::PTransformd(sva::RotZ(M_PI), Eigen::Vector3d(0.6, 0.0, 1.4)));
+}
 
 void MyFirstController::switch_com_target()
 {
@@ -70,7 +70,7 @@ void MyFirstController::switch_com_target()
   // in the reset function
   if(comDown)
   {
-    comTask->com(comZero - Eigen::Vector3d{-0.03, 0, -0.2});
+    comTask->com(comZero - Eigen::Vector3d{0.09, 0.0, -0.27});
   }
   else
   {
