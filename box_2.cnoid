@@ -31,28 +31,28 @@ items:
           data: 
             modelFile: "${PROGRAM_TOP}/share/OpenHRP-3.1/robot/JVRC1/main.wrl"
             currentBaseLink: "PELVIS"
-            rootPosition: [ -0.0942609419, -0.00873650108, 0.486826898 ]
+            rootPosition: [ -0.178174094, -0.000422805613, 0.784501055 ]
             rootAttitude: [ 
-              0.982257905, 0.101633536, -0.15760721, 
-              -0.118492758, 0.987750532, -0.101530057, 
-              0.145357747, 0.118404015, 0.982268606 ]
+              0.957884348, 0.00855660113, 0.287026758, 
+              -0.00831123879, 0.999963312, -0.00207326193, 
+              -0.287033968, -0.000399602777, 0.957920321 ]
             jointPositions: [ 
-              -1.221780,  0.066786,  0.130502,  2.193666, -0.008097, -0.815077, -1.138393,  0.016966,  0.041837,  2.144057, 
-              -0.121407, -0.851881, -0.263920,  0.228317, -0.409408,  0.004651, -0.064474, -0.171101, -1.834320,  0.136923, 
-               0.178655, -0.017741,  0.196518,  0.184115, -0.665390,  0.003415,  0.006890, -0.006932, -0.006904, -0.006932, 
-              -0.006904, -2.026770, -0.150662,  0.182967, -0.018068,  0.346008,  0.529088, -0.830478, -0.003592, -0.007090, 
-               0.007029,  0.007069,  0.007028,  0.007069 ]
-            initialRootPosition: [ -0.0164712421, -0.00366884734, 0.823007651 ]
+              -0.958981, -0.007575,  0.001290,  0.793316,  0.006915, -0.125444, -0.959117,  0.027085,  0.007557,  0.796319, 
+              -0.013608, -0.128023, -0.016749,  0.287652,  0.017159,  0.000690, -0.003214, -0.277911, -1.328657,  0.081176, 
+              -0.696989, -0.253302, -0.761651,  0.678546,  1.433287, -0.047684, -0.095278,  0.095253,  0.095266,  0.095253, 
+               0.095266, -1.322883, -0.092685,  0.708326, -0.259124,  0.768188, -0.680412, -1.443496,  0.050727,  0.101445, 
+              -0.101475, -0.101450, -0.101476, -0.101450 ]
+            initialRootPosition: [ -0.103392811, -0.00467875848, 0.480487076 ]
             initialRootAttitude: [ 
-              0.999520541, 0.000990316287, -0.030946845, 
-              -0.00104419639, 0.999997967, -0.00172494057, 
-              0.0309450738, 0.00175642811, 0.999519543 ]
+              0.995551204, 0.0255517303, -0.0906912834, 
+              -0.0258185284, 0.99966508, -0.00176968016, 
+              0.0906156907, 0.00410332269, 0.995877482 ]
             initialJointPositions: [ 
-              -0.379810, -0.008074, -0.000838,  0.742713,  0.002117, -0.331916, -0.377849,  0.022870, -0.000819,  0.736924, 
-              -0.021918, -0.328003,  0.000273,  0.132712,  0.002899, -0.000007,  0.000172,  0.000190, -0.046211, -0.158306, 
-               0.002202, -0.510719,  0.000086,  0.001314,  0.000224,  0.002210,  0.003101, -0.002201, -0.002804, -0.002201, 
-              -0.002804, -0.046428,  0.159369, -0.001891, -0.511009, -0.000085, -0.001148, -0.000219, -0.002217, -0.003024, 
-               0.002064,  0.002707,  0.002064,  0.002707 ]
+              -1.281154,  0.024464,  0.019441,  2.177177,  0.014483, -0.805438, -1.269449, -0.006504, -0.063166,  2.179086, 
+              -0.086499, -0.817444,  0.019612,  0.231947,  0.002306,  0.000245, -0.002868, -0.104703, -1.815237,  0.068381, 
+              -0.456652, -0.038178, -0.574892, -0.283555,  1.023747, -0.048179, -0.098516,  0.082298,  0.089824,  0.082447, 
+               0.090121, -1.813482, -0.067051,  0.450906, -0.038355,  0.569934,  0.287121, -1.018485,  0.051225,  0.105096, 
+              -0.086582, -0.095069, -0.086834, -0.095179 ]
             zmp: [ 0, 0, 0 ]
             collisionDetection: true
             selfCollisionDetection: false
@@ -172,42 +172,42 @@ items:
             file: "${PROJECT_DIR}/sim_mc.py"
         - 
           id: 9
-          name: "shelf"
+          name: "TempBase"
           plugin: Body
           class: BodyItem
           data: 
-            modelFile: "/root/ros/Test-model-file-with-wget/OpenCampus2018Fall/shelf.wrl"
-            currentBaseLink: "CHEST_P"
-            rootPosition: [ 1, 0, 0 ]
+            modelFile: "${SHARE}/model/misc/box6.body"
+            currentBaseLink: "WAIST"
+            rootPosition: [ 0.88531885, 0.00785811087, 0.199847023 ]
             rootAttitude: [ 
-              0.000796326711, 0.999999683, 0, 
-              -0.999999683, 0.000796326711, 0, 
-              0, 0, 1 ]
+              0.999933487, -0.0115315773, -0.000212331192, 
+              0.0115315818, 0.999933509, 1.99738038e-05, 
+              0.000212086745, -2.24209898e-05, 0.999999977 ]
             jointPositions: [  ]
-            initialRootPosition: [ 1, 0, 0 ]
+            initialRootPosition: [ 0.785461593, 0.0113127856, 0.614826638 ]
             initialRootAttitude: [ 
-              0.000796326711, 0.999999683, 0, 
-              -0.999999683, 0.000796326711, -0, 
-              -0, 0, 1 ]
+              0.999441099, -0.0334288489, 4.56298926e-05, 
+              0.0334288792, 0.999439838, -0.00158736741, 
+              7.45953291e-06, 0.00158800559, 0.999998739 ]
             zmp: [ 0, 0, 0 ]
             collisionDetection: true
             selfCollisionDetection: false
-            isEditable: false
+            isEditable: true
         - 
           id: 10
-          name: "box2"
+          name: "BOX"
           plugin: Body
           class: BodyItem
           data: 
-            modelFile: "${SHARE}/model/misc/box2.body"
+            modelFile: "${SHARE}/model/misc/box6.body"
             currentBaseLink: "WAIST"
-            rootPosition: [ 0.905765844, 0.180703289, 1.45803383 ]
+            rootPosition: [ 0.293247431, 0.566433653, 0.199805388 ]
             rootAttitude: [ 
-              1, 0, 0, 
-              0, 1, 0, 
-              0, 0, 1 ]
+              -0.0964120789, 2.87605297e-06, -0.995341505, 
+              -0.995341504, 2.45199417e-05, 0.096412079, 
+              2.46830019e-05, 1, 4.98636335e-07 ]
             jointPositions: [  ]
-            initialRootPosition: [ 0.905765844, 0.180703289, 1.45803383 ]
+            initialRootPosition: [ 0.456084966, -0.0138692705, 1.06776254 ]
             initialRootAttitude: [ 
               1, 0, 0, 
               0, 1, 0, 
@@ -221,15 +221,16 @@ views:
     id: 0
     plugin: Base
     class: ItemPropertyView
+    mounted: true
   - 
     id: 1
     plugin: Base
     class: ItemTreeView
     mounted: true
     state: 
-      selected: [ 9 ]
-      checked: [ 3, 4, [ 5, "ForceSensor" ], 6, 8, 9, 10 ]
-      expanded: [ 2, 3, 4, 5, 7 ]
+      selected: [ 3 ]
+      checked: [ 3, 4, [ 5, "ForceSensor" ], 6, 8, 10 ]
+      expanded: [ 2, 3, 4, 5, 7, 9, 10 ]
   - 
     id: 2
     plugin: Base
@@ -290,7 +291,7 @@ views:
     class: SceneView
     mounted: true
     state: 
-      editMode: false
+      editMode: true
       viewpointControlMode: thirdPerson
       collisionLines: false
       polygonMode: fill
@@ -329,9 +330,9 @@ views:
           fieldOfView: 0.6978
           near: 0.01
           far: 10000
-          eye: [ -1.79714293, -1.17127268, 2.17555931 ]
-          direction: [ 0.821218488, 0.358483307, -0.443948097 ]
-          up: [ 0.406871678, 0.177610108, 0.896052502 ]
+          eye: [ 3.99971961, -2.52016211, 3.09781089 ]
+          direction: [ -0.656108198, 0.560319627, -0.50553333 ]
+          up: [ -0.384424944, 0.328300793, 0.862807077 ]
         - 
           camera: [ System, Orthographic ]
           orthoHeight: 20
@@ -395,6 +396,7 @@ views:
     id: 11
     plugin: Body
     class: JointSliderView
+    mounted: true
     state: 
       showAllJoints: true
       jointId: true
@@ -404,7 +406,7 @@ views:
       slider: true
       dial: false
       labelOnLeft: true
-      currentBodyItem: 9
+      currentBodyItem: 3
   - 
     id: 12
     name: "Joint State"
@@ -417,7 +419,7 @@ views:
     class: LinkSelectionView
     state: 
       listingMode: "Link List"
-      currentBodyItem: 9
+      currentBodyItem: 3
       bodyItems: 
         - 
           id: 3
@@ -445,16 +447,14 @@ views:
 toolbars: 
   "TimeBar": 
     minTime: 0
-    maxTime: 42
+    maxTime: 65.615
     frameRate: 1000
     playbackFrameRate: 50
     idleLoopDrivenMode: false
-    currentTime: 4.074
+    currentTime: 8.482
     speedScale: 1
     syncToOngoingUpdates: true
     autoExpansion: true
-  "LeggedBodyBar": 
-    stanceWidth: 0.15
   "KinematicsBar": 
     mode: IK
     enablePositionDragger: true
@@ -464,7 +464,9 @@ toolbars:
     penetrationBlockDepth: 0.0005
     lazyCollisionDetectionMode: true
   "BodyBar": 
-    current: 9
+    current: 3
+  "LeggedBodyBar": 
+    stanceWidth: 0.15
   "BodyMotionGenerationBar": 
     autoGenerationForNewBody: true
     balancer: false
@@ -558,13 +560,22 @@ viewAreas:
           sizes: [ 1341, 508 ]
           children: 
             - 
-              type: pane
-              views: [ 5 ]
-              current: 5
+              type: splitter
+              orientation: horizontal
+              sizes: [ 941, 396 ]
+              children: 
+                - 
+                  type: pane
+                  views: [ 5 ]
+                  current: 5
+                - 
+                  type: pane
+                  views: [ 0, 11, 12 ]
+                  current: 12
             - 
               type: pane
-              views: [ 12, 9, 1 ]
-              current: 1
+              views: [ 9, 1 ]
+              current: 9
         - 
           type: pane
           views: [ 2, 16 ]
