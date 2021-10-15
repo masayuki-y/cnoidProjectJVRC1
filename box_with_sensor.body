@@ -1,0 +1,50 @@
+format: ChoreonoidBody
+formatVersion: 1.0
+angleUnit: radian
+name: Box
+
+links:
+  -
+    name: WAIST
+    jointType: free
+    elements:
+      -
+        type: RigidBody
+        mass: 0.8
+        centerOfMass: [ 0, 0, 0 ]
+        inertia: [
+          0.01, 0, 0,
+          0, 0.01, 0,
+          0, 0, 0.01 ]
+        elements:
+          Shape:
+            geometry:
+              type: Box
+              size: [ 0.4, 0.4, 0.4 ]
+            appearance:
+              material:
+                diffuseColor: [ 0, 0.6, 0 ]
+                specularColor: [ 0.2, 0.8, 0.2 ]
+                shininess: 0.02
+      -
+        type: ForceSensor
+        name: Light
+        translation: [ 0.08, 0, 0.1 ]
+        direction: [ 1, 0, 0 ]
+        beamWidth: 36
+        cutOffAngle: 40
+        cutOffExponent: 6
+        attenuation: [ 1, 0, 0.01 ]
+        elements:
+          Shape:
+            rotation: [ 0, 0, 1, 90 ]
+            translation: [ -0.02, 0, 0 ]
+            geometry:
+              type: Cone
+              height: 0.04
+              radius: 0.025
+            appearance:
+              material:
+                diffuseColor: [ 1.0, 1.0, 0.4 ]
+                ambientIntensity: 0.3
+                emissiveColor: [ 0.8, 0.8, 0.3 ]
