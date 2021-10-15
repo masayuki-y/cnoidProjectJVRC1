@@ -1,0 +1,50 @@
+format: ChoreonoidBody
+formatVersion: 1.0
+angleUnit: degree
+name: Box
+links:
+  -
+    name: MAIN
+    translation: [ 0, 0, 0 ]
+    jointType: free
+    centerOfMass: [ 0, 0, 0 ]
+    mass: 0.4
+    inertia: [
+      0.1, 0,   0,
+      0,   0.1, 0,
+      0,   0,   0.1 ]
+    elements:
+      Shape:
+        geometry:
+          type: Box
+          size: [ 0.4, 0.4, 0.4 ]
+        appearance: &BodyAppearance
+          material:
+            diffuseColor: [ 0, 0.6, 0 ]
+            specularColor: [ 0.2, 0.8, 0.2 ]
+            shininess: 0.6
+  -
+    name: SUB
+    parent: MAIN
+    translation: [ 0, 0., 0 ]
+    jointType: fixed
+    jointAxis: Y
+    centerOfMass: [ 0, 0, 0 ]
+    mass: 0.0
+    inertia: [
+      0.1, 0,    0,
+      0,    0.1, 0,
+      0,    0,    0.1]
+    elements:
+      Shape: &TRACK
+        geometry:
+          type: Extrusion
+          crossSection: [
+            -0.2, -0.2,
+             -0.2, 0.2,
+             -0.3,  0.2
+            ]
+          spine: [ 0, -0.2, 0, 0, 0.2, 0 ]
+        appearance:
+          material:
+            diffuseColor: [ 0.5, 0.5, 0 ]
